@@ -32,7 +32,7 @@ const User = require('../models/User')
     }
 
     // Check for duplicate title
-    const duplicate = await Note.findOne({ title }).lean().exec()
+    const duplicate = await Note.findOne({ title }).collation({ locale: 'en', strength: 2}).lean().exec()
 
     if (duplicate) {
         return res.status(409).json({ message: 'Duplicate note title' })
@@ -70,7 +70,7 @@ const User = require('../models/User')
     }
 
     //Check for duplicate title
-    const duplicate = await Note.findOne({ title }).lean().exec()
+    const duplicate = await Note.findOne({ title }).collation({ locale: 'en', strength: 2}).lean().exec()
 
     // Allow renaming to the original(current) note only 
     if (duplicate && duplicate?._id.toString() !== id) {

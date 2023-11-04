@@ -1,7 +1,5 @@
 const allowedOrigins = [
-  'http://localhost:3000',
-  'http://www.projrepairshop.com',
-  'http://projrepairshop.com',
+  'http://https://technotes-vgew.onrender.com',
 ];
 
 module.exports = allowedOrigins;
