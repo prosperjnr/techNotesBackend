@@ -1,5 +1,5 @@
 const allowedOrigins = [
-  'http://https://technotes-vgew.onrender.com',
+  'https://https://technotes-vgew.onrender.com',
 ];
 
 module.exports = allowedOrigins;
